@@ -4,6 +4,26 @@ GET http://localhost:8080/contacts
 ###
 GET http://localhost:8080/contacts/66f74e9c8d92c9afd20550c4
 ###
-GET http://localhost:8080/contacts/66f750bd8d92c9afd20550c7
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Miles",
+    "lastName": "Morales",
+    "email": "imspiderman@fakemail.com",
+    "favoriteColor": "Black",
+    "birthday": "01/01/2017"
+}
 ###
-GET http://localhost:8080/contacts/66f7511a8d92c9afd20550c8
+PUT http://localhost:8080/contacts/66f74e9c8d92c9afd20550c4 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Peter",
+    "lastName": "Parker",
+    "email": "spiderman@fakemail.com",
+    "favoriteColor": "Red",
+    "birthday": "01/01/1999"
+}
+###
+DELETE http://localhost:8080/contacts/66ff1305da9937a24bd0f39b HTTP/1.1
